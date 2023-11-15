@@ -3,18 +3,15 @@ import Image from 'next/image';
 
 const Home = () => {
   return (
-    <>
-      <div>
-        {/* Header */}
-        <Header />
-        {/* Hero */}
-        {/* About */}
-        {/* Experience */}
-        {/* Skills */}
-        {/* Projects */}
-        {/* Contact Me */}
-      </div>
-    </>
+    <div>
+      <Header />
+      {/* Hero */}
+      {/* About */}
+      {/* Experience */}
+      {/* Skills */}
+      {/* Projects */}
+      {/* Contact Me */}
+    </div>
   );
 };
 
