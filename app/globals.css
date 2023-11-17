@@ -23,6 +23,7 @@
   --forestBGColor: '#354f52';
   --oceanGreen: '#52796F';
   --lightGreen: '#84A98C';
+  /* text color below */
   --greyGreen: '#cad2c5';
 
   --primaryColor: var(--lightGreen);
