@@ -8,6 +8,9 @@
     text-[#cad2c5] transition-all hover:border-[#52796F]/40 
     hover:text-[#cad2c5]/40 hover:border;
   }
+  .sectionHeader {
+    @apply absolute top-24 uppercase tracking-[20px] text-[#cad2c5] text-2xl;
+  }
 }
 
 :root {
