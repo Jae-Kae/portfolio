@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import ExperienceCard from './ExperienceCard'
 
 type Props = {}
 
@@ -15,10 +16,10 @@ const WorkExperience = (props: Props) => {
       <h3 className='sectionHeader'>Expeerience</h3>
 
       <div>
-        {/* Experience Card */}
-        {/* Experience Card */}
-        {/* Experience Card */}
-        {/* Experience Card */}
+        <ExperienceCard />
+        <ExperienceCard />
+        <ExperienceCard />
+        <ExperienceCard />
       </div>
     </motion.div>
   )
