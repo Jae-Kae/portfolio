@@ -2,10 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .heroBtn {
+    @apply px-6 py-2 mx-4 border border-[#2F3E46] rounded-full uppercase text-xs tracking-widest
+    text-[#cad2c5] transition-all hover:border-[#52796F]/40 
+    hover:text-[#cad2c5]/40 hover:border;
+  }
+  .sectionHeader {
+    @apply absolute top-24 uppercase tracking-[20px] text-[#cad2c5] text-2xl;
+  }
+}
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+  --darkestGreen: '#2F3E46';
+  /* background color below */
+  --forestBGColor: '#354f52';
+  --oceanGreen: '#52796F';
+  --lightGreen: '#84A98C';
+  /* text color below */
+  --greyGreen: '#cad2c5';
+
+  --primaryColor: var(--lightGreen);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,7 +37,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -24,4 +45,4 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-}
+} */
