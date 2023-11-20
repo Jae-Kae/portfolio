@@ -11,7 +11,10 @@ import Image from 'next/image'
 
 const Home = () => {
   return (
-    <div className='bg-[#354F52] text-[#cad2c5] h-screen snap-y snap-mandatory overflow-scroll z-0'>
+    <div
+      className='bg-[#354F52] text-[#cad2c5] h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden
+    customScrollbar'
+    >
       <Header />
 
       <section id='hero' className='snap-start'>

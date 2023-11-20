@@ -19,6 +19,9 @@
     text-gray-800 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40
     focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40;
   }
+  .customScrollbar {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/60;
+  }
 }
 
 :root {
