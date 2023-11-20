@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
-import { SocialIcon } from 'react-social-icons';
+'use client'
+import React from 'react'
+import { motion } from 'framer-motion'
+import { SocialIcon } from 'react-social-icons'
 
-type Props = {};
+type Props = {}
 
 const Header = (props: Props) => {
   return (
@@ -30,7 +30,7 @@ const Header = (props: Props) => {
           bgColor='transparent'
         />
         <SocialIcon
-          url='https://www.tiktok.com/@janette.king'
+          url='https://github.com/Jae-Kae'
           fgColor='gray'
           bgColor='transparent'
         />
@@ -67,7 +67,7 @@ const Header = (props: Props) => {
         </p>
       </motion.div>
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header
