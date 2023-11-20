@@ -7,7 +7,12 @@ type Props = {}
 const Projects = (props: Props) => {
   const projects = [1, 2, 3, 4, 5, 6]
   return (
-    <div className='h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      className='h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0'
+    >
       <h3 className='sectionHeader'>Projects</h3>
       <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
         {projects.map((project, i) => (
@@ -25,7 +30,7 @@ const Projects = (props: Props) => {
             />
             <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
               <h4 className='text-4xl font-semibold text-center'>
-                <span className='underline decoraction-[#F7AB0A]/50'>
+                <span className='underline decoration-[#f7ab0a]/50'>
                   case study {i + 1} of {projects.length}:
                 </span>{' '}
                 UPS clone
@@ -41,7 +46,7 @@ const Projects = (props: Props) => {
         ))}
       </div>
       <div className='absolute w-full top-[30%] bg-[#84A98C]/10 left-0 h-[500px] -skew-y-12'></div>
-    </div>
+    </motion.div>
   )
 }
 
