@@ -42,33 +42,34 @@ const Header = (props: Props) => {
         />
       </motion.div>
 
-      <Link href='#contact'>
-        <motion.div
-          initial={{
-            x: 500,
-            opacity: 0,
-            scale: 0.5,
-          }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1.5,
-          }}
-        >
-          <SocialIcon
-            className='cursor-pointer'
-            network='email'
-            fgColor='gray'
-            bgColor='transparent'
-          />
+      <motion.div
+        initial={{
+          x: 500,
+          opacity: 0,
+          scale: 0.5,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.5,
+        }}
+      >
+        <SocialIcon
+          className='cursor-pointer'
+          network='email'
+          fgColor='gray'
+          bgColor='transparent'
+          href='#contact'
+        />
+        <Link href='#contact'>
           <p className='uppercase hidden md:inline-flex text-sm text-gray-400'>
             GET IN TOUCH
           </p>
-        </motion.div>
-      </Link>
+        </Link>
+      </motion.div>
     </header>
   )
 }
