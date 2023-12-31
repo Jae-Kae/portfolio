@@ -5,7 +5,6 @@ import Hero from '@/components/Hero'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import WorkExperience from '@/components/WorkExperience'
-import Image from 'next/image'
 import Link from 'next/link'
 
 // pallet https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46
