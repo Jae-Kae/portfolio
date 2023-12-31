@@ -11,6 +11,17 @@
   .sectionHeader {
     @apply absolute top-24 uppercase tracking-[20px] text-[#cad2c5] text-2xl;
   }
+  .icon {
+    @apply text-[#f7ab0a] h-7 w-7 animate-pulse;
+  }
+  .contactInput {
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
+    text-gray-800 placeholder-gray-500 transition-all focus:border-[#f7ab0a]/40
+    focus:text-[#f7ab0a]/40 hover:border-[#f7ab0a]/40;
+  }
+  .customScrollbar {
+    @apply scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#f7ab0a]/60;
+  }
 }
 
 :root {
@@ -25,6 +36,7 @@
   --lightGreen: '#84A98C';
   /* text color below */
   --greyGreen: '#cad2c5';
+  --highlightColor: #f7ab0a;
 
   --primaryColor: var(--lightGreen);
 }

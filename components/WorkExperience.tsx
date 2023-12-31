@@ -13,9 +13,9 @@ const WorkExperience = (props: Props) => {
       transition={{ duration: 1.5 }}
       className='h-screen relative overflow-hidden flex flex-col text-lift md:flex-row max-w-full px-10 justify-evenly mx-auto items-center'
     >
-      <h3 className='sectionHeader'>Expeerience</h3>
+      <h3 className='sectionHeader'>Experience</h3>
 
-      <div className='w-full flex mt-10 space-x-5 overflow-scroll p-10  snap-mandatory'>
+      <div className='customScrollbar w-full flex mt-10 space-x-5 overflow-scroll p-10  snap-mandatory'>
         <ExperienceCard />
         <ExperienceCard />
         <ExperienceCard />
