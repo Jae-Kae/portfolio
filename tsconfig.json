@@ -22,6 +22,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "sanity/schemas copy/social.env",
+    "sanity/schemas copy/skill.env",
+    "sanity/schemas copy/project.env",
+    "sanity/schemas copy/experience.env"
+  ],
   "exclude": ["node_modules"]
 }
