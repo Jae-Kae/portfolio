@@ -30,7 +30,9 @@
     "sanity/schemas copy/social.env",
     "sanity/schemas copy/skill.env",
     "sanity/schemas copy/project.env",
-    "sanity/schemas copy/experience.env"
+    "sanity/schemas copy/experience.env",
+    "components/Layout.jsx",
+    "components/Layout.jsx"
   ],
   "exclude": ["node_modules"]
 }

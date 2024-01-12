@@ -43,7 +43,14 @@ export default defineType({
       title: 'Address',
       type: 'string',
     }),
-
+    defineField({
+      name: 'profilePic',
+      title: 'Profile Pic',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    }),
     defineField({
       name: 'socials',
       title: 'Socials',

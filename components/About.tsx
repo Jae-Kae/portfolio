@@ -1,10 +1,12 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { PageInformation } from '@/typings'
+import { urlFor } from '@/sanity'
 
-type Props = {}
+type Props = { pageInfo: PageInformation }
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -29,7 +31,7 @@ const About = (props: Props) => {
         viewport={{
           once: true,
         }}
-        src='https://media.licdn.com/dms/image/D5603AQEpkYbzWs7gzw/profile-displayphoto-shrink_800_800/0/1664904622974?e=1705536000&v=beta&t=ooGalYlf2TuufVlpFC09mcEN3v49Z4Y0fTu3ITigc68'
+        src={urlFor(pageInfo?.profilePic).url()}
         alt='profile portrait'
         className='mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]'
       />
@@ -39,12 +41,7 @@ const About = (props: Props) => {
           <span className='underline decoration-[#f7ab0a]/50'>little</span>{' '}
           background:
         </h4>
-        <p className='text-base'>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio
-          distinctio neque nihil quisquam blanditiis id dolore, consequuntur
-          consectetur? Laboriosam ex sed sequi sint optio aut reiciendis harum
-          ipsum eveniet.
-        </p>
+        <p className='text-base'>{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   )

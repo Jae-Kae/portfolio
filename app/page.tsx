@@ -5,36 +5,47 @@ import Hero from '@/components/Hero'
 import Projects from '@/components/Projects'
 import Skills from '@/components/Skills'
 import WorkExperience from '@/components/WorkExperience'
+import { fetchPageInformation } from '@/utils/fetchPageInformation'
+import { fetchProjects } from '@/utils/fetchProjects'
+import { fetchSocials } from '@/utils/fetchSocials'
+import { fetchExperiences } from '@/utils/fetchExperiences'
 import Link from 'next/link'
+import { fetchSkills } from '@/utils/fetchSkills'
 
 // pallet https://coolors.co/palette/cad2c5-84a98c-52796f-354f52-2f3e46
 
-const Home = () => {
+const Home = async () => {
+  const pageInfo = await fetchPageInformation()
+  const projects = await fetchProjects()
+  const skills = await fetchSkills()
+  const socials = await fetchSocials()
+  const experiences = await fetchExperiences()
+
   return (
     <div
       className='bg-[#354F52] text-[#cad2c5] h-screen snap-y snap-mandatory overflow-y-scroll z-0 overflow-x-hidden
     customScrollbar'
     >
-      <Header />
+      <Header socials={socials} />
 
       <section id='hero' className='snap-start'>
-        <Hero />
+        <Hero pageInfo={pageInfo} />
       </section>
 
       <section id='about' className='snap-center'>
-        <About />
+        <About pageInfo={pageInfo} />
       </section>
 
       <section id='experience' className='snap-center'>
-        <WorkExperience />
+        <WorkExperience experiences={experiences} />
       </section>
 
       <section id='skills' className='snap-start'>
-        <Skills />
+        <Skills skills={skills} />
       </section>
 
       <section id='projects' className='snap-start'>
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Contact Me */}

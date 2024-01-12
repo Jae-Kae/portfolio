@@ -1,11 +1,13 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
+import { Project } from '@/typings'
+import { urlFor } from '@/sanity'
+import { url } from 'inspector'
 
-type Props = {}
+type Props = { projects: Project[] }
 
-const Projects = (props: Props) => {
-  const projects = [1, 2, 3, 4, 5, 6]
+const Projects = ({ projects }: Props) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -15,7 +17,7 @@ const Projects = (props: Props) => {
     >
       <h3 className='sectionHeader'>Projects</h3>
       <div className='customScrollbar scrollbar-thin relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20'>
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
             key={i}
             className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'
@@ -28,7 +30,7 @@ const Projects = (props: Props) => {
               transition={{ duration: 1.2 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              src='https://cdn.sanity.io/images/ltuexkre/production/af7ca99b5a796d0698cf9121a4a0795b5022b6be-666x375.png'
+              src={urlFor(project?.image).url()}
               alt=''
             />
             <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
@@ -36,19 +38,26 @@ const Projects = (props: Props) => {
                 <span className='underline decoration-[#f7ab0a]/50'>
                   case study {i + 1} of {projects.length}:
                 </span>{' '}
-                UPS clone
+                {project?.title}
               </h4>
+              <div className='flex items-center justify-center'>
+                {project?.technologies.map((tech) => (
+                  <img
+                    className='h-10 w-10'
+                    key={tech._id}
+                    src={urlFor(tech.image).url()}
+                    alt='tech icon'
+                  />
+                ))}
+              </div>
               <p className='text-lg text-center md:text-left'>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum,
-                eaque tempora nisi possimus ex dolore voluptatum eum repudiandae
-                labore. Dolores tempora consectetur voluptas minus,
-                exercitationem nobis dignissimos cumque nemo? Molestiae.
+                {project?.summary}
               </p>
             </div>
           </div>
         ))}
       </div>
-      <div className='absolute w-full top-[30%] bg-[#84A98C]/10 left-0 h-[500px] -skew-y-12'></div>
+      <div className='absolute w-full top-[30%] bg-[#84A98C]/10 left-0 h-[500px] -skew-y-12' />
     </motion.div>
   )
 }
